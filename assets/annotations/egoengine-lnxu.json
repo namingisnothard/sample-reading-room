@@ -1,0 +1,678 @@
+{
+  "paper": "2606.12604v1",
+  "notes": [
+    {
+      "id": "d000e794-8a6e-4923-bb02-2d8bb88d70a2",
+      "kind": "Comment",
+      "text": "currently provided by dataset",
+      "url": "",
+      "anchor": {
+        "block": "S3.SS1.p1.1",
+        "start": 766,
+        "end": 777,
+        "quote": "object mesh"
+      },
+      "updated": "2026-09-07T11:50:46.468Z"
+    }
+  ],
+  "marks": [
+    {
+      "block": "abstract1.1",
+      "start": 553,
+      "end": 619,
+      "quote": "a high-fidelity robot observation video replacing human with robot",
+      "id": "95217602-6787-4f4c-920e-16e8d1265607",
+      "type": "highlight"
+    },
+    {
+      "block": "abstract1.1",
+      "start": 684,
+      "end": 734,
+      "quote": "a task-aligned, executable robot action trajectory",
+      "id": "acf192f5-aeed-4f55-b5ef-bde0ca2f28ac",
+      "type": "highlight"
+    },
+    {
+      "block": "S1.p2.1",
+      "start": 65,
+      "end": 349,
+      "quote": "The challenge is twofold: visually, human arms and hands occlude the scene and differ substantially from the robot embodiment; on the action side, differences in morphology, kinematics, actuation, and contact dynamics make directly retargeted robot trajectories physically infeasible.",
+      "id": "9c5d82e1-2320-4360-a175-2e6428161efc",
+      "type": "highlight",
+      "color": "yellow"
+    },
+    {
+      "block": "S1.I1.i2.p1.1",
+      "start": 113,
+      "end": 208,
+      "quote": "identifies executable action generation as the primary factor of downstream policy performance.",
+      "id": "9906e959-eea7-46cb-aaa2-a432c3f6a5ea",
+      "type": "highlight",
+      "color": "green"
+    },
+    {
+      "block": "S1.I1.i3.p1.1",
+      "start": 49,
+      "end": 263,
+      "quote": "through visual fidelity analysis, action evaluation in simulation, and downstream policy distillation, enabling zero-shot dexterous manipulation on a real humanoid robot without using any real robot demonstrations.",
+      "id": "2f33efdb-b9a3-4546-90c5-81c1c58eb437",
+      "type": "highlight",
+      "color": "green"
+    },
+    {
+      "block": "S3.SS1.p1.1",
+      "start": 135,
+      "end": 247,
+      "quote": "Aria Gen2 glasses [9], which provide synchronized RGB frames and per-frame 3D hand poses with 21 hand keypoints.",
+      "id": "cb26af2a-0bc3-41dc-95dd-c242283706d7",
+      "type": "highlight",
+      "color": "blue"
+    },
+    {
+      "block": "S3.SS1.p1.1",
+      "start": 251,
+      "end": 321,
+      "quote": "estimate absolute depth maps from the RGB frames with FoundationStereo",
+      "id": "5edbf6e4-0686-4983-9bcd-bd8158a46bbd",
+      "type": "highlight",
+      "color": "blue"
+    },
+    {
+      "block": "S3.SS1.p1.1",
+      "start": 340,
+      "end": 344,
+      "quote": "SAM2",
+      "id": "fee97c30-90c5-4dee-9c6f-79e852e9c819",
+      "type": "highlight",
+      "color": "blue"
+    },
+    {
+      "block": "S3.SS1.p1.1",
+      "start": 374,
+      "end": 413,
+      "quote": "hand-keypoint prompts provide human arm",
+      "id": "c2eb0812-2240-4f33-8d69-ce5b3c22d7b4",
+      "type": "highlight",
+      "color": "blue"
+    },
+    {
+      "block": "S3.SS1.p1.1",
+      "start": 464,
+      "end": 516,
+      "quote": "first-frame point prompt tracks the task-object mask",
+      "id": "42d7f508-fcde-4a19-b075-33273e6ae0a2",
+      "type": "highlight",
+      "color": "blue"
+    },
+    {
+      "block": "S3.SS1.p1.1",
+      "start": 600,
+      "end": 674,
+      "quote": "FoundationPose [48] estimates a temporally consistent 6D object trajectory",
+      "id": "ed54d026-c135-4526-ad7f-b2220b2a4e87",
+      "type": "highlight",
+      "color": "blue"
+    },
+    {
+      "block": "S3.SS2.SSS1.p1.1",
+      "start": 9,
+      "end": 71,
+      "quote": "retarget the human hand motion to a reference robot trajectory",
+      "id": "bf135f92-c807-46ff-b142-dfc29f9994a0",
+      "type": "highlight",
+      "color": "blue"
+    },
+    {
+      "block": "S3.SS2.SSS1.p1.1",
+      "start": 83,
+      "end": 119,
+      "quote": "fingertip positions and orientations",
+      "id": "67830a5d-5f2f-4f30-81e8-142a59b7322a",
+      "type": "highlight",
+      "color": "pink"
+    },
+    {
+      "block": "S3.SS2.SSS1.p1.1",
+      "start": 220,
+      "end": 237,
+      "quote": "wrist orientation",
+      "id": "854e1367-eb42-49b4-a2a3-1cbac1d9bc47",
+      "type": "highlight",
+      "color": "pink"
+    },
+    {
+      "block": "S3.SS2.SSS1.p1.1",
+      "start": 304,
+      "end": 349,
+      "quote": "solve an inverse-kinematics problem with MINK",
+      "id": "0d118863-3142-40ad-8517-0d34f275da34",
+      "type": "highlight",
+      "color": "pink"
+    },
+    {
+      "block": "S3.SS2.SSS1.p1.2",
+      "start": 444,
+      "end": 501,
+      "quote": "serves as the initial motion prior for action refinement.",
+      "id": "20b2afea-49ac-4326-ad9a-07f47a90cb5b",
+      "type": "highlight",
+      "color": "pink"
+    },
+    {
+      "block": "S3.SS2.SSS2.p1.1",
+      "start": 19,
+      "end": 91,
+      "quote": "EgoEngine faces a long-horizon, high-DoF trajectory optimization problem",
+      "id": "801fb2cd-252a-453d-a10f-58d03651ea5d",
+      "type": "highlight",
+      "color": "green"
+    },
+    {
+      "block": "S3.SS2.SSS2.p1.1",
+      "start": 251,
+      "end": 284,
+      "quote": "Retargeting alone is insufficient",
+      "id": "22d69245-4cc2-4aa2-8311-253faa999a9d",
+      "type": "highlight",
+      "color": "green"
+    },
+    {
+      "block": "S3.SS2.SSS2.p1.1",
+      "start": 306,
+      "end": 436,
+      "quote": "replaying it often fails under the human-to-robot embodiment gap, including kinematic mismatch and contact-dynamics discrepancies;",
+      "id": "2f3dfdcb-ef84-46ba-aa7c-53f4b1a5bcc4",
+      "type": "highlight",
+      "color": "green"
+    },
+    {
+      "block": "S3.SS2.SSS2.p1.1",
+      "start": 545,
+      "end": 611,
+      "quote": "proprio-to-action gap for applying forces and sustaining contacts.",
+      "id": "59c62100-ff79-4f9c-8dfc-0dcbe7147f0f",
+      "type": "highlight",
+      "color": "green"
+    },
+    {
+      "block": "S3.SS2.SSS2.p1.1",
+      "start": 615,
+      "end": 797,
+      "quote": "refine the reference trajectory in simulation with an object-centric objective, using object motion extracted from human videos as the task-level target for executable robot actions.",
+      "id": "a2b62a30-dbc8-4202-95c1-344c33f8f68f",
+      "type": "highlight",
+      "color": "pink"
+    },
+    {
+      "block": "S3.SS2.SSS2.p2.1",
+      "start": 213,
+      "end": 240,
+      "quote": "object pose tracking error ",
+      "id": "a6826770-6f12-4426-b6ac-86bc46d19617",
+      "type": "highlight",
+      "color": "pink"
+    },
+    {
+      "block": "S3.SS2.SSS2.p3.1",
+      "start": 24,
+      "end": 122,
+      "quote": "decomposes the long-horizon trajectory into temporal chunks and optimizes each chunk progressively",
+      "id": "8ec886f3-f3c8-47af-a462-3d42a8dd6504",
+      "type": "highlight",
+      "color": "pink"
+    },
+    {
+      "block": "S3.SS2.SSS2.p3.1",
+      "start": 215,
+      "end": 271,
+      "quote": "Replay directly executes the reference robot trajectory.",
+      "id": "a28bfaf1-3247-4f5d-889f-84a1b2700157",
+      "type": "highlight",
+      "color": "purple"
+    },
+    {
+      "block": "S3.SS2.SSS2.p3.1",
+      "start": 215,
+      "end": 271,
+      "quote": "Replay directly executes the reference robot trajectory.",
+      "id": "f2c44b4f-c4a5-4bd2-a2b2-2dc4a6f8285a",
+      "type": "highlight",
+      "color": "purple"
+    },
+    {
+      "block": "S3.SS2.SSS2.p3.1",
+      "start": 272,
+      "end": 398,
+      "quote": "MPC searches over short-horizon action samples around the reference trajectory, providing local correction at a moderate cost.",
+      "id": "5069b6b5-7a7a-487d-b934-52d1b23eeef0",
+      "type": "highlight",
+      "color": "purple"
+    },
+    {
+      "block": "S3.SS2.SSS2.p3.1",
+      "start": 399,
+      "end": 453,
+      "quote": "RL trains a hand residual policy for difficult chunks.",
+      "id": "6ad3322c-fb1c-4fc5-9db5-fd29b2f960a7",
+      "type": "highlight",
+      "color": "purple"
+    },
+    {
+      "block": "S3.SS2.SSS2.p4.1",
+      "start": 250,
+      "end": 310,
+      "quote": "Monte Carlo Tree Search (MCTS)-style mode-switching strategy",
+      "id": "a426ee91-dcd3-463b-b652-d2daa3c24369",
+      "type": "highlight",
+      "color": "purple"
+    },
+    {
+      "block": "S3.SS2.SSS2.p4.1",
+      "start": 910,
+      "end": 971,
+      "quote": "To avoid local minima from optimizing each chunk in isolation",
+      "id": "77119208-d379-4a83-bbfa-1049c9ba7124",
+      "type": "highlight",
+      "color": "green"
+    },
+    {
+      "block": "S3.SS2.SSS2.p4.1",
+      "start": 973,
+      "end": 1064,
+      "quote": "EgoEngine uses a two-chunk optimization window, jointly solving the current and next chunks",
+      "id": "4f1ceb30-f9d7-4729-b295-9571460c8fa1",
+      "type": "highlight",
+      "color": "pink"
+    },
+    {
+      "block": "S3.SS4.p1.1",
+      "start": 474,
+      "end": 526,
+      "quote": "We train a visuomotor policy πθ\\pi_{\\theta} with HPT",
+      "id": "8af6c260-c04c-4af9-9aa6-c372dbe1a380",
+      "type": "highlight",
+      "color": "pink"
+    },
+    {
+      "block": "S4.SS1.p1.1",
+      "start": 52,
+      "end": 142,
+      "quote": "First, are the generated robot observations visually aligned with real robot observations?",
+      "id": "f2dfbfe4-c073-4ea3-9dd5-e7d6ef7c7538",
+      "type": "highlight",
+      "color": "yellow"
+    },
+    {
+      "block": "S4.SS1.p1.1",
+      "start": 245,
+      "end": 313,
+      "quote": "Second, are the generated robot actions executable and task-aligned?",
+      "id": "98588d4c-bfc2-49f3-a6d5-d38b412694ef",
+      "type": "highlight",
+      "color": "yellow"
+    },
+    {
+      "block": "S4.SS1.p1.1",
+      "start": 421,
+      "end": 504,
+      "quote": "Third, do the generated observation–action pairs support zero-shot policy learning?",
+      "id": "80c8ad2d-b599-4876-83ea-37e0c9dad288",
+      "type": "highlight",
+      "color": "yellow"
+    },
+    {
+      "block": "A1.p1.1",
+      "start": 90,
+      "end": 131,
+      "quote": "RB-Y1 equipped with XHand dexterous hands",
+      "id": "d03fc9c2-83d8-41f4-8f3b-6fc7d6d93543",
+      "type": "highlight",
+      "color": "yellow"
+    },
+    {
+      "block": "A1.SS2.p1.1",
+      "start": 0,
+      "end": 120,
+      "quote": "We collect real robot teleoperation demonstration data for reference and sample-efficiency comparison in the main paper.",
+      "id": "f886cf9f-4bfe-4a31-95de-64fbbb58053e",
+      "type": "highlight",
+      "color": "yellow"
+    },
+    {
+      "block": "S3.SS3.p1.1",
+      "start": 263,
+      "end": 282,
+      "quote": "Inpaint-Anything v2",
+      "id": "e4cda894-968d-4b7a-b781-76290b8a39a3",
+      "type": "highlight",
+      "color": "pink"
+    },
+    {
+      "block": "S1.p4.1",
+      "start": 67,
+      "end": 127,
+      "quote": "through an object-centric visual–action generation pipeline.",
+      "id": "3cf32797-aa17-4d6a-a5fc-4ce5652b17df",
+      "type": "highlight",
+      "color": "yellow"
+    },
+    {
+      "block": "S1.p4.1",
+      "start": 67,
+      "end": 127,
+      "quote": "through an object-centric visual–action generation pipeline.",
+      "id": "25589b98-5ad1-4e31-b22a-998f19a97de3",
+      "type": "highlight",
+      "color": "yellow"
+    },
+    {
+      "block": "S1.p4.1",
+      "start": 170,
+      "end": 190,
+      "quote": "build a digital twin",
+      "id": "7839d25f-3eba-4c2e-95ad-404272b2920b",
+      "type": "highlight",
+      "color": "blue"
+    },
+    {
+      "block": "S1.p4.1",
+      "start": 277,
+      "end": 321,
+      "quote": "replaces the human with the robot appearance",
+      "id": "27bc3ac0-0d21-46a9-98b5-e6d461a05969",
+      "type": "highlight",
+      "color": "blue"
+    },
+    {
+      "block": "S1.p4.1",
+      "start": 756,
+      "end": 879,
+      "quote": "escalating from Replay to Model Predictive Control (MPC) and Reinforcement Learning (RL) when stronger refinement is needed",
+      "id": "4ccd3741-137e-4751-abe7-5ccb00ab0335",
+      "type": "highlight",
+      "color": "blue"
+    },
+    {
+      "block": "S1.p4.1",
+      "start": 470,
+      "end": 526,
+      "quote": "retargets human motion into a robot reference trajectory",
+      "id": "d9a202cf-aad8-4ef6-8f2d-eae3cfe8930f",
+      "type": "highlight",
+      "color": "blue"
+    },
+    {
+      "block": "S1.p4.1",
+      "start": 909,
+      "end": 968,
+      "quote": "generated demonstrations support downstream policy training",
+      "id": "4f919ecd-e919-48a9-9650-ad3c2209a626",
+      "type": "highlight",
+      "color": "blue"
+    },
+    {
+      "block": "S2.p1.1",
+      "start": 199,
+      "end": 210,
+      "quote": "glove-based",
+      "id": "877b7e83-81cc-4b89-8b6c-aef678bdbb2c",
+      "type": "highlight",
+      "color": "yellow"
+    },
+    {
+      "block": "S2.p1.1",
+      "start": 220,
+      "end": 245,
+      "quote": "hand-as-interface systems",
+      "id": "efaf0dba-e344-4e93-a317-59cf6056ba41",
+      "type": "highlight",
+      "color": "yellow"
+    },
+    {
+      "block": "S2.p1.1",
+      "start": 500,
+      "end": 526,
+      "quote": "structured motion planning",
+      "id": "c0e43fdb-5816-48f0-81b6-948395024e5a",
+      "type": "highlight",
+      "color": "yellow"
+    },
+    {
+      "block": "S2.p1.1",
+      "start": 687,
+      "end": 726,
+      "quote": "incorporating object-centric objectives",
+      "id": "9b50142d-e8c4-4fed-aee3-f5c4612f98f3",
+      "type": "highlight",
+      "color": "yellow"
+    },
+    {
+      "block": "S6.p1.1",
+      "start": 469,
+      "end": 606,
+      "quote": "Obtaining high-quality object assets, estimating object states under severe occlusion, and handling deformable objects remain challenging",
+      "id": "fb0df03e-5e35-4c47-b0d4-4df83db9eea7",
+      "type": "highlight",
+      "color": "green"
+    },
+    {
+      "block": "S6.p1.1",
+      "start": 623,
+      "end": 698,
+      "quote": " Simulation-based trajectory optimization is still slow at very large scale",
+      "id": "4e8d0b42-892e-4340-8938-a2d79bf36dbe",
+      "type": "highlight",
+      "color": "green"
+    },
+    {
+      "block": "A5.SS1.p2.1",
+      "start": 393,
+      "end": 457,
+      "quote": "EgoEngine is not uniformly better than real robot demonstrations",
+      "id": "45752c46-3b29-4230-89d0-8b5439b6946b",
+      "type": "highlight",
+      "color": "green"
+    },
+    {
+      "block": "A3.SS3.p1.1",
+      "start": 0,
+      "end": 97,
+      "quote": "We use SR (Success Rate), Step, Reward, and Cost for action branch evaluation in the main paper.\n",
+      "id": "0d1f1ebc-9b98-46da-bd44-0908c23394f2",
+      "type": "highlight",
+      "color": "pink"
+    },
+    {
+      "block": "A3.SS3.p2.1",
+      "start": 139,
+      "end": 289,
+      "quote": "To calculate SR, a trajectory is counted as successful only if it completes the full reference horizon without violating the object-tracking boundary.",
+      "id": "e17e352b-067d-45e2-aaef-974a5d9bbf2a",
+      "type": "highlight",
+      "color": "pink"
+    },
+    {
+      "block": "A3.SS3.p2.3",
+      "start": 9,
+      "end": 93,
+      "quote": "measures the fraction of the reference trajectory completed before early termination",
+      "id": "0315ca81-09a7-454b-966c-4ea1533edba1",
+      "type": "highlight",
+      "color": "pink"
+    },
+    {
+      "block": "A3.SS3.p3.1",
+      "start": 3,
+      "end": 100,
+      "quote": "report Reward as the object-tracking reward ratio compared with the perfect reference trajectory.",
+      "id": "61c5755d-8fe9-4c1b-bd5a-f2d9491fcd5f",
+      "type": "highlight",
+      "color": "pink"
+    },
+    {
+      "block": "A3.SS3.p4.1",
+      "start": 0,
+      "end": 100,
+      "quote": "Cost measures the average simulation steps required to generate one successful trajectory timestep.\n",
+      "id": "7eec800b-1a0f-436b-a2ac-5daa05214aba",
+      "type": "highlight",
+      "color": "pink"
+    },
+    {
+      "block": "A5.SS2.p5.1",
+      "start": 43,
+      "end": 218,
+      "quote": "We further demonstrate that EgoEngine can use human videos to generate robot actions for complex manipulation tasks that are difficult to collect through visual teleoperation,",
+      "id": "a4a470f0-f25b-4a67-a4b4-bf01bbfc0b90",
+      "type": "highlight",
+      "color": "yellow"
+    },
+    {
+      "block": "S2.p2.1",
+      "start": 207,
+      "end": 325,
+      "quote": "Most methods follow an inpainting–rendering–blending pipeline to replace the human with the robot appearance in videos",
+      "id": "99b1c547-e8e3-4efe-b05a-1ded9a6eb9b3",
+      "type": "highlight",
+      "color": "yellow"
+    },
+    {
+      "block": "S2.p2.1",
+      "start": 581,
+      "end": 695,
+      "quote": "EgoEngine follows the controllable inpainting–rendering–blending pipeline and further grounds it in a digital twin",
+      "id": "cfc84aca-067c-4639-8f72-73be8f01e1c3",
+      "type": "highlight",
+      "color": "yellow"
+    },
+    {
+      "block": "S2.p3.1",
+      "start": 410,
+      "end": 556,
+      "quote": "However, these methods still rely on robot demonstrations as the target domain, limiting their ability to learn zero-shot from human videos alone.",
+      "id": "0b4e9cb3-95ec-4cf7-af53-93bfb31fc960",
+      "type": "highlight",
+      "color": "yellow"
+    },
+    {
+      "block": "S2.p3.1",
+      "start": 634,
+      "end": 757,
+      "quote": "but without explicit action refinement, they are mainly demonstrated on simpler manipulation settings or lower-DoF grippers",
+      "id": "445398cc-9f06-4a47-9e33-fa125997e6c1",
+      "type": "highlight",
+      "color": "yellow"
+    },
+    {
+      "block": "S2.p3.1",
+      "start": 345,
+      "end": 391,
+      "quote": "co-training across human and robot embodiments",
+      "id": "0125fe55-d728-4515-b19a-4a4ae4dbd78d",
+      "type": "highlight",
+      "color": "yellow"
+    },
+    {
+      "block": "S2.p3.1",
+      "start": 229,
+      "end": 270,
+      "quote": "pretraining or high-level policy planning",
+      "id": "3a90b0c0-8d55-492e-b103-9e59db8ee94a",
+      "type": "highlight",
+      "color": "yellow"
+    },
+    {
+      "block": "S2.p2.1",
+      "start": 351,
+      "end": 471,
+      "quote": "motion- and physics-conditioned video generation and editing methods show promise for controllable robot video synthesis",
+      "id": "ed6a1e4a-692e-4379-8b6d-0539072bd9cd",
+      "type": "highlight",
+      "color": "yellow"
+    },
+    {
+      "block": "S4.SS1.p3.1",
+      "start": 22,
+      "end": 165,
+      "quote": "we evaluate on 16 selected demonstration pairs from TACO that are compatible with our robot embodiment and digital-twin reconstruction pipeline",
+      "id": "d6482406-9c10-42f7-a279-818221b65ccc",
+      "type": "highlight",
+      "color": "yellow"
+    },
+    {
+      "block": "S4.SS1.p3.1",
+      "start": 187,
+      "end": 425,
+      "quote": "e evaluate on four Aria tasks: Mustard (placing a mustard bottle onto a target plate),\nDrawer (opening a drawer and placing a cube inside),\nHammer (picking up a hammer and striking a nail),\nand Flower (holding a water bottle to a flower).",
+      "id": "80f2c373-90a6-4a49-8feb-8843a9f005c3",
+      "type": "highlight",
+      "color": "yellow"
+    },
+    {
+      "block": "S4.SS1.p4.1",
+      "start": 61,
+      "end": 173,
+      "quote": "For visual fidelity, we report qualitative comparisons and feature-space alignment with real robot observations.",
+      "id": "fc7f1a4c-ecc5-4016-91fa-6ef51286e657",
+      "type": "highlight",
+      "color": "yellow"
+    },
+    {
+      "block": "S4.SS1.p4.1",
+      "start": 174,
+      "end": 264,
+      "quote": "For action fidelity, we report success rate, object-tracking reward, and generation cost.\n",
+      "id": "d864d8dd-fd9c-40eb-bfe5-e235f4eb51d1",
+      "type": "highlight",
+      "color": "yellow"
+    },
+    {
+      "block": "S4.SS1.p4.1",
+      "start": 264,
+      "end": 360,
+      "quote": "For downstream policy performance, we report real-robot success rate under fixed rollout trials.",
+      "id": "aed0ed6d-009a-4429-815c-d2fe5e192b61",
+      "type": "highlight",
+      "color": "yellow"
+    },
+    {
+      "block": "S4.SS3.p1.1",
+      "start": 389,
+      "end": 406,
+      "quote": "success rate (SR)",
+      "id": "a73c3701-67a3-418b-b3a7-e1254ff73a99",
+      "type": "highlight",
+      "color": "yellow"
+    },
+    {
+      "block": "S4.SS3.p1.1",
+      "start": 460,
+      "end": 467,
+      "quote": " (Step)",
+      "id": "1bb39c76-238a-4a14-9097-914940068954",
+      "type": "highlight",
+      "color": "yellow"
+    },
+    {
+      "block": "S4.SS3.p1.1",
+      "start": 552,
+      "end": 561,
+      "quote": "(Reward).",
+      "id": "e6fcc3a3-ed38-4b19-a5d6-6d64aaa5b136",
+      "type": "highlight",
+      "color": "yellow"
+    },
+    {
+      "block": "S4.SS3.p1.1",
+      "start": 552,
+      "end": 561,
+      "quote": "(Reward).",
+      "id": "df8e16ac-b9e7-4c68-b87d-9e74db6fa861",
+      "type": "highlight",
+      "color": "yellow"
+    }
+  ],
+  "versionName": "lnxu",
+  "exportedAt": "2026-09-08T06:35:41.225Z",
+  "formatVersion": 2
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "lingxiao",
+    "author": "lingxiao guo",
+    "handle": "Lingxiao234",
+    "url": "https://x.com/Lingxiao234/status/2096992059731443923",
+    "date": "Mon Sep 07 16:00:41 +0000 2026",
+    "media": "assets/discussion/lingxiao.mp4",
+    "poster": "assets/discussion/lingxiao.jpg",
+    "mediaSource": "https://video.twimg.com/amplify_video/2096992032623607809/vid/avc1/720x720/pmkVc55bnUfc_9fp.mp4?tag=16"
+  },
+  {
+    "id": "kingston",
+    "author": "Kingston Kuan",
+    "handle": "kstonekuan",
+    "url": "https://x.com/kstonekuan/status/2097119396032569555",
+    "date": "Tue Sep 08 00:26:41 +0000 2026",
+    "media": "assets/discussion/kingston.mp4",
+    "poster": "assets/discussion/kingston.jpg",
+    "mediaSource": "https://video.twimg.com/amplify_video/2097117752603627520/vid/avc1/468x360/oYJ4-YDc5e7UK_b3.mp4?tag=29"
+  },
+  {
+    "id": "dmytro",
+    "author": "Dmytro Hrybov",
+    "handle": "dimentary",
+    "url": "https://x.com/dimentary/status/2097141042214797801",
+    "date": "Tue Sep 08 01:52:42 +0000 2026",
+    "media": "assets/discussion/dmytro.mp4",
+    "poster": "assets/discussion/dmytro.jpg",
+    "mediaSource": "https://video.twimg.com/amplify_video/2097140400058503168/vid/avc1/640x360/HzCnKNoB7oiHNHmi.mp4?tag=29"
+  },
+  {
+    "id": "bilawal",
+    "author": "Bilawal Sidhu",
+    "handle": "bilawalsidhu",
+    "url": "https://x.com/bilawalsidhu/status/2096810261730505075",
+    "date": "Mon Sep 07 03:58:17 +0000 2026",
+    "media": "assets/discussion/bilawal.mp4",
+    "poster": "assets/discussion/bilawal.jpg",
+    "mediaSource": "https://video.twimg.com/amplify_video/2096807551614742528/vid/avc1/640x360/kJkmfPAjDgUmQC9u.mp4?tag=29"
+  }
+]

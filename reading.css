@@ -1,0 +1,212 @@
+:root{font:16px/1.5 system-ui,sans-serif;color:#243044;background:#edf0f4;--accent:#315acb;--line:#dde2eb}*{box-sizing:border-box}body{margin:0}button,input,textarea,select{font:inherit}button,a,input,textarea,select{outline-offset:4px}button,.button{cursor:pointer;border:1px solid var(--line);border-radius:6px;background:white;color:inherit;padding:7px 11px;text-decoration:none;font-size:14px}button:hover,.button:hover{border-color:var(--accent);color:var(--accent)}button.primary{background:var(--accent);color:white;border-color:var(--accent)}header{height:66px;position:sticky;top:0;z-index:5;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:12px;padding:0 24px}header strong{margin-right:auto}header small{font-weight:400;color:#69758b;margin-left:12px}#save-status{font-size:12px;color:#68768b}.layout{display:grid;grid-template-columns:208px minmax(0,1fr) 355px;max-width:1800px;margin:auto}.contents{position:sticky;top:66px;height:calc(100vh - 66px);overflow:auto;padding:26px 18px}.eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#718096;font-weight:650}.contents a{display:block;color:#556279;text-decoration:none;font-size:14px;padding:7px 0}.contents a:hover{color:var(--accent)}main{min-width:0;background:white;padding:40px 42px 80px}.paper-meta{color:#6c7890;font-size:13px;margin-bottom:20px}article{font:18px/1.75 Georgia,serif;overflow-wrap:break-word}article h1{font-size:34px;line-height:1.2;margin-top:0;letter-spacing:-.025em}article h2{font-size:26px;line-height:1.3;margin-top:42px}article h3{font-size:22px;line-height:1.35}article h4{font-size:19px}article p{margin:14px 0}article a{color:#315acb;text-decoration:none}article img{max-width:100%;height:auto}article figure{margin:26px 0}article figcaption{font-size:15px;line-height:1.55;color:#536075;margin-top:12px}article table{max-width:100%;font-size:14px;border-collapse:collapse;display:block;overflow-x:auto}article td,article th{padding:5px}article math{font-size:1em}article .ltx_authors{font:14px/1.6 system-ui;color:#617087;margin:20px 0 30px}article .ltx_author_notes{display:none}article .ltx_para{scroll-margin-top:100px}article .ltx_biblist{font-size:14px}article .ltx_tag{margin-right:5px}article .ltx_tabular td{border-bottom:1px solid #ddd}article .ltx_equation{overflow-x:auto}article [data-block]{cursor:text}article .active-block{box-shadow:-3px 0 var(--accent);padding-left:10px}::selection{background:#cad8ff}mark{background:#fff0a6;color:inherit;border-radius:2px}mark.removed{background:#fbe9e9;color:#955252;text-decoration:line-through;text-decoration-thickness:1.5px}
+article[data-removal-mode="hidden"] mark.removed{display:none}
+.removed-formula{position:relative;background:#fbe9e9!important;color:#955252}
+.removed-formula::after{content:"";position:absolute;left:0;right:0;top:50%;height:1.5px;background:#b45050;pointer-events:none}
+button:disabled{opacity:.4;cursor:default}
+#removal-mode{margin-bottom:18px}aside{border-left:1px solid var(--line);position:sticky;top:66px;height:calc(100vh - 66px);overflow-y:auto;padding:24px 20px;background:#f7f8fb}aside h2{font-size:20px;margin:0}aside .intro{font-size:14px;color:#748096;margin:6px 0 20px}.tools{display:flex;gap:7px;flex-wrap:wrap;margin:14px 0}.context{font:italic 14px/1.6 Georgia,serif;color:#56657d;border-left:2px solid #a6b9f3;padding-left:12px;max-height:100px;overflow:auto;margin:12px 0}label{display:block;font-size:13px;color:#637189;margin:12px 0 5px}textarea,input,select{width:100%;border:1px solid #d4dbe7;background:white;border-radius:6px;padding:9px;color:#243044;font-size:14px}textarea{resize:vertical;min-height:100px}#composer{border-bottom:1px solid var(--line);padding-bottom:15px;margin-bottom:18px}.card{background:white;border:1px solid var(--line);border-radius:8px;padding:15px;margin:12px 0}.card p{white-space:pre-wrap;font-size:14px;overflow-wrap:anywhere}.card a{font-size:14px;color:var(--accent);overflow-wrap:anywhere}.card .kind{color:#61749c;font-size:12px;text-transform:uppercase;letter-spacing:.06em}.card button{font-size:12px;padding:4px 7px}.card blockquote{margin:10px 0;color:#6c7890;font:italic 13px/1.6 Georgia;cursor:pointer;border-left:2px solid #ccd8f2;padding-left:10px}.empty{font-size:14px;color:#758096;padding:25px 0}.hidden{display:none!important}#notice{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#23334d;color:white;padding:12px 20px;border-radius:8px;z-index:10;font-size:14px}#clear-context{padding:3px 7px;font-size:12px}.flash{animation:flash 1.5s}@keyframes flash{from{background:#dce7ff}to{background:transparent}}@media(min-width:1450px){main{padding-left:80px;padding-right:80px}.layout{grid-template-columns:220px minmax(0,1fr) 380px}}@media(max-width:1100px){.layout{grid-template-columns:minmax(0,1fr) 330px}.contents{display:none}main{padding:30px}}@media(max-width:720px){header{height:auto;min-height:66px;padding:12px;flex-wrap:wrap}header small{display:none}.layout{display:flex;flex-direction:column}main{padding:26px 20px}aside{position:relative;top:0;height:auto;border-left:0;border-top:1px solid var(--line)}article{font-size:17px}article h1{font-size:28px}#save-status{width:100%}}
+
+/* Let visual material use the horizontal reading surface. */
+.layout{max-width:none;grid-template-columns:180px minmax(0,1fr) 330px}
+main{padding:36px 28px 80px}
+article figure{width:100%!important;max-width:100%;float:none;clear:both;margin:32px 0}
+article figure>img,article figure>p>img{display:block;width:100%;height:auto;object-fit:contain}
+article figure img{height:auto;max-width:100%;object-fit:contain}
+article figure .ltx_inline-block{display:inline-block;max-width:100%;vertical-align:middle}
+article figure>p>.ltx_inline-block{display:block;width:100%!important}
+article figure span.ltx_tabular{display:table;table-layout:fixed;width:100%}
+article figure .ltx_tr{display:table-row}
+article figure .ltx_td{display:table-cell;vertical-align:middle;text-align:center;padding:3px!important}
+article figure .ltx_td .ltx_inline-block{width:100%!important}
+article figure .ltx_td img{display:block;width:100%;height:auto}
+article figure .ltx_td{font:12px/1.35 system-ui,sans-serif;overflow-wrap:anywhere}
+article table.ltx_equation{display:block;width:100%;max-width:100%;overflow-x:auto;overflow-y:hidden;font-size:1em;padding:16px 2px;margin:24px 0;overscroll-behavior-x:contain}
+article table.ltx_equation>tbody{display:table;width:100%}
+article .ltx_equation tr{overflow:visible}
+article .ltx_equation td{border:0;padding:6px 4px;vertical-align:middle;white-space:nowrap}
+article .ltx_eqn_center_padleft,article .ltx_eqn_center_padright{width:50%}
+article .ltx_eqn_eqno{font-size:14px;color:#68758a;text-align:right;padding-left:20px!important}
+article .ltx_equation math{white-space:nowrap;overflow-wrap:normal}
+article .ltx_align_center{text-align:center}
+article .ltx_align_left{text-align:left}
+article .ltx_align_right{text-align:right}
+article .active-block{padding-left:0}
+.math-display{display:block;min-width:max-content;margin:4px 0}
+.math-inline{display:inline;white-space:nowrap}
+@media(min-width:1600px){.layout{grid-template-columns:190px minmax(0,1fr) 350px}main{padding-left:40px;padding-right:40px}}
+@media(max-width:1100px){.layout{grid-template-columns:minmax(0,1fr) 300px}main{padding:30px 22px}}
+@media(max-width:720px){main{padding:26px 16px}article table.ltx_equation{font-size:16px}article figure .ltx_td{font-size:12px}}
+
+#reading-view{width:auto;max-width:190px;font-size:14px}
+header .view-label{margin:0;font-size:13px}
+#highlight-color{width:auto;flex:1;min-width:95px}
+.color-label{width:100%;margin:0}
+.sentence-item{display:list-item;list-style-type:disc;margin:0 0 12px 1.35em;padding-left:5px}
+.sentence-item::marker{color:#8293b5;font-size:.8em}
+article[data-removal-mode="visible"] mark.removed{background:#fbe9e9!important}
+@media(max-width:900px){header{height:auto;min-height:66px;flex-wrap:wrap;padding:10px 16px}}
+
+/* arXiv uses classed spans rather than <strong> for paragraph emphasis. */
+article .ltx_font_bold,
+article .ltx_text.ltx_font_bold{font-weight:700}
+
+article .comment-sticker{display:inline-flex;align-items:center;gap:3px;vertical-align:baseline;margin:0 5px;padding:1px 5px;border:1px solid #bdcdf2;border-radius:7px;background:#eef3ff;cursor:pointer;line-height:1.4;font:14px/1.4 system-ui,sans-serif;user-select:none}
+article .comment-sticker::before{content:"💬"}
+article .comment-sticker::after{content:attr(data-count);font-size:12px;color:#315acb}
+article .comment-sticker:hover{background:#dce7ff;border-color:#315acb}
+article .comment-sticker:focus-visible{outline:2px solid #315acb;outline-offset:3px}
+
+.solver-guide{margin:0 0 22px;padding-bottom:16px;border-bottom:1px solid var(--line)}.solver-guide .tools{margin:8px 0}.solver-guide h3{font-size:16px;margin:8px 22px 10px 0}.solver-guide p{font-size:14px;line-height:1.55;margin:10px 0}.solver-guide a{font-size:13px;color:var(--accent)}#solver-help{position:relative;padding:10px 12px;background:#edf3ff;border-radius:7px;border:1px solid #cad8f6}#close-solver{position:absolute;right:6px;top:6px;padding:0 6px;font-size:18px}.solver-evidence{color:#637189;font-size:12px!important}article .solver-term{border-bottom:1px dotted #315acb;cursor:help}article .solver-term:hover,article .solver-term:focus-visible{background:#e5edff;outline:2px solid #aec3f5;outline-offset:2px}.solver-guide button[aria-expanded="true"]{background:#dce7ff;border-color:#315acb}
+
+/* The sticker floats above the exact commented phrase without adding text. */
+article .comment-anchor,article .commented-formula{position:relative;text-decoration-line:underline;text-decoration-color:#7799df;text-decoration-thickness:2px;text-underline-offset:4px;text-decoration-skip-ink:auto}
+article .comment-anchor>.comment-sticker,article .commented-formula>.comment-sticker{position:absolute;left:calc(var(--sticker-offset,0) * 31px);top:-1.05em;z-index:2;margin:0;padding:0 3px;font-size:13px;line-height:1.2;white-space:nowrap;box-shadow:0 1px 3px #2430441a;text-decoration:none}
+article .comment-anchor:hover{background:#edf3ff}
+
+/* Two reading columns: prose on the left, evidence and annotations on the right. */
+:root{--reader-header:80px}
+body>header{min-height:68px;height:auto;flex-wrap:wrap;padding:12px 22px}
+.layout{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,1fr);max-width:1660px;align-items:start;padding:0 22px;gap:30px}
+.layout>main{padding:36px 24px 90px;min-width:0}
+main>article{font-size:18px;line-height:1.85;max-width:76ch;margin:auto}
+main>article h1{font-size:31px;line-height:1.25}
+main>article .reading-visual{display:none!important}
+.layout>.contents{display:none}
+.layout>.contents.contents-open{display:block;position:fixed;top:var(--reader-header);left:16px;width:260px;height:calc(100vh - var(--reader-header));z-index:8;background:#fff;border:1px solid var(--line);box-shadow:0 10px 25px #24304422}
+#reading-companion{top:var(--reader-header);height:calc(100vh - var(--reader-header));min-width:0;padding:0 20px 28px;background:#f6f8fc;border-left:1px solid var(--line)}
+.companion-tabs{display:flex;gap:8px;padding:16px 0 12px;position:sticky;top:0;z-index:4;background:#f6f8fc;border-bottom:1px solid var(--line);margin-bottom:16px}
+.companion-tabs button{flex:1;font-size:14px}.companion-tabs [aria-selected="true"]{color:#244dac;border-color:#9bb4e6;background:#e9effc}
+.companion-heading{display:flex;align-items:center;justify-content:space-between;gap:15px;font-size:14px;font-weight:600}
+.companion-hint{font-size:13px;color:#718097;margin:8px 0 20px}
+.evidence-body{font:16px/1.6 system-ui,sans-serif;background:#fff;border:1px solid #dce3ee;border-radius:9px;padding:16px;margin:16px 0;min-width:0}
+.evidence-body h3,.citation-list h3{font:600 14px/1.4 system-ui;color:#536987;margin:0 0 12px}
+.evidence-body figure{margin:0!important;width:100%!important}.evidence-body figure img{width:100%;height:auto}.evidence-body figure figcaption{font:14px/1.55 system-ui;margin-top:12px}
+.evidence-body table{font-size:14px;width:100%;overflow:auto}.evidence-body table.ltx_tabular{display:table}.evidence-body{overflow-x:auto}.evidence-body .ltx_equation{font-size:17px;margin:0!important}
+.evidence-body .ltx_td{padding:6px!important}.evidence-body .ltx_border_t{border-top:1px solid #abb7cb}.evidence-body .ltx_border_b{border-bottom:1px solid #abb7cb}
+.reference-card{background:#fff;border-left:3px solid #a5bce8;padding:12px 14px;margin:10px 0;font:14px/1.6 system-ui;overflow-wrap:anywhere}.reference-card .ltx_bibitem{list-style:none}.reference-card .ltx_bibblock{display:inline}.reference-card .ltx_tag{font-weight:700;color:#315acb;margin-right:5px}.reference-card a{color:#315acb}
+#notes-panel .solver-guide{margin-top:0}
+@media(max-width:1000px){.layout{padding:0 10px;gap:16px;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.layout>main{padding:28px 15px}#reading-companion{padding-left:12px;padding-right:12px}main>article{font-size:17px}main>article h1{font-size:27px}}
+@media(max-width:720px){.layout{display:block;padding:0}.layout>main{padding:24px 18px}#reading-companion{position:relative;top:0;height:auto;border-left:0;border-top:1px solid var(--line);padding-bottom:30px}.companion-tabs{position:static}body>header{padding:10px 14px}.layout>.contents.contents-open{top:var(--reader-header)}.evidence-body{padding:12px}}
+
+#margin-notes-toggle[aria-expanded="true"]{color:#244dac;background:#e9effc;border-color:#9bb4e6}#video-scope{margin:0 0 16px;width:100%;font-size:14px}.demo-list h3{font-size:15px;color:#536987}.demo-card{margin:16px 0;background:white;border:1px solid #dce3ee;border-radius:8px;padding:14px}.demo-card video{display:block;width:100%;height:auto;max-height:420px;background:#172130;border-radius:5px}.demo-card figcaption{font-size:14px;line-height:1.5;margin-bottom:10px}.demo-card figcaption p{font-size:13px;color:#69778e;margin:5px 0}.demo-card>a{display:block;font-size:12px;color:#315acb;margin-top:8px}
+
+/* Reference cues retain the original text and annotation offsets. */
+[data-ref-kind="citation"]{--ref-ink:#315acb;--ref-tint:#eaf0ff}
+[data-ref-kind="figure"]{--ref-ink:#08756b;--ref-tint:#e1f4ef}
+[data-ref-kind="table"]{--ref-ink:#98600b;--ref-tint:#fff0d6}
+[data-ref-kind="equation"]{--ref-ink:#7545a4;--ref-tint:#f0e8fa}
+main>article a.paper-ref{color:var(--ref-ink);background:var(--ref-tint);font-weight:700;border-radius:4px;padding:1px 3px;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+main>article a.paper-ref:hover,main>article a.paper-ref:focus-visible,main>article a.paper-ref.reference-match{outline:2px solid var(--ref-ink);outline-offset:2px}
+#evidence-content .reference-match{border-color:var(--ref-ink);box-shadow:0 0 0 2px var(--ref-ink);background:var(--ref-tint)}
+.reference-card{padding:9px 12px;margin:8px 0;line-height:1.4;border-radius:5px}
+.reference-title{display:block;font-size:14px;font-weight:600;line-height:1.4;text-decoration:none}
+.reference-title:hover{text-decoration:underline}.reference-meta{margin:4px 0 0;color:#67768b;font-size:12px;line-height:1.4}
+
+/* Citations stay in the text flow, without individual cards. */
+.reference-list{margin:5px 0 14px;padding-left:19px}
+.reference-list .reference-line{margin:4px 0;padding:0;font:13px/1.45 system-ui,sans-serif;overflow-wrap:anywhere}
+.reference-line::marker{color:#718097}
+.reference-line .reference-title{display:inline;font:600 13px/1.45 system-ui,sans-serif;color:#315acb;text-decoration:none}
+.reference-line .reference-title:hover{text-decoration:underline}
+.reference-line .reference-meta{display:inline;margin:0;font-size:12px}
+#evidence-content .reference-line.reference-match{box-shadow:none;background:transparent;border:0}
+.reference-line.reference-match .reference-title{background:var(--ref-tint);text-decoration:underline;text-decoration-thickness:2px}
+.citation-list h3{margin-bottom:6px}
+
+/* A quiet outer margin guides the argument without entering selectable paper text. */
+@media(min-width:1101px){
+ .layout{max-width:1880px;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr)}
+ .layout>main{padding-left:178px}
+ main>article .paragraph-flow{display:grid;grid-template-columns:132px minmax(0,1fr);column-gap:22px;margin:14px 0 14px -154px;align-items:start}
+ main>article .paragraph-flow>p{margin:0;min-width:0}
+ main>article .paragraph-takeaway{text-align:right;padding-top:5px}
+}
+main>article .paragraph-takeaway{font:300 13px/1.55 system-ui,sans-serif;color:#738094;letter-spacing:.005em;cursor:default}
+@media(max-width:1100px){
+ main>article .paragraph-flow{margin:18px 0}
+ main>article .paragraph-flow>p{margin-top:5px}
+ main>article .paragraph-takeaway{font-size:12px;max-width:48ch}
+}
+
+/* Keep contribution markers on the paragraph baseline, below any mobile takeaway. */
+main>article .ltx_itemize{padding-left:1.25em}
+main>article .ltx_itemize>.ltx_item>.ltx_tag_item{display:none}
+main>article .ltx_itemize>.ltx_item>.ltx_para>p:first-child,
+main>article .ltx_itemize>.ltx_item>.ltx_para>.paragraph-flow>p{position:relative}
+main>article .ltx_itemize>.ltx_item>.ltx_para>p:first-child::before,
+main>article .ltx_itemize>.ltx_item>.ltx_para>.paragraph-flow>p::before{content:'•';position:absolute;left:-1.05em;top:0;line-height:inherit;color:#718097}
+main>article .ltx_itemize>.ltx_item>.ltx_para>p[data-sentence-list]::before,
+main>article .ltx_itemize>.ltx_item>.ltx_para>.paragraph-flow>p[data-sentence-list]::before{content:none}
+
+article .solver-term{background:#eef3fb;color:#3b5681;border-radius:3px;text-decoration:none;border-bottom:1px dotted #7892b8;box-decoration-break:clone;-webkit-box-decoration-break:clone}.solver-guide button[hidden]{display:none!important}
+
+.equation-location{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin:-5px 0 12px;font:12px/1.4 system-ui;color:#778397}
+.equation-location button{flex-shrink:0;border:0;background:transparent;padding:2px 0;font-size:12px;color:#315acb}
+.equation-context{font:14px/1.55 system-ui;color:#5c6980;margin:8px 0 15px}
+.equation-context p{font:inherit;margin:0}
+.equation-explanation{margin-top:14px;border-top:1px solid #e0e5ed;padding-top:10px;font:13px/1.6 system-ui;color:#5c6980}
+.equation-explanation summary{cursor:pointer;color:#526b94;font-size:12px}
+.equation-explanation p{font:inherit;margin:10px 0}
+main>article .equation-origin{outline:2px solid #b7a1d0;outline-offset:6px;background:#f6f1fc;scroll-margin-top:120px}
+
+/* Each numbered table is independent of the source's multi-panel figure layout. */
+.evidence-body figure.ltx_table{display:block;float:none;position:static;width:100%!important;max-width:100%;height:auto!important}
+.evidence-body table.ltx_tabular{display:table;table-layout:auto!important;width:100%;max-width:none;border-collapse:collapse}
+.evidence-body table.ltx_tabular td,.evidence-body table.ltx_tabular th{position:static;white-space:nowrap;word-break:normal;overflow-wrap:normal;line-height:1.5;padding:7px 10px!important}
+.evidence-body table.ltx_tabular .ltx_align_left{text-align:left}.evidence-body table.ltx_tabular .ltx_align_center{text-align:center}
+.evidence-body figure.ltx_table figcaption{position:static;clear:both;white-space:normal}
+.method-technical{border-top:1px solid #d9e1ee;margin-top:12px;padding-top:10px}
+.method-technical>a{font-size:12px;font-weight:600}.method-formula{overflow-x:auto;max-width:100%;padding:9px 0;font-size:14px}.method-technical p{font-size:12px;line-height:1.5;margin:5px 0}
+/* Remove arXiv's print-scale boxes so captions follow the actual table height. */
+.evidence-body .ltx_transformed_outer,.evidence-body .ltx_transformed_inner{display:block!important;transform:none!important;position:static!important;width:auto!important;height:auto!important;max-height:none!important;vertical-align:baseline!important;overflow:visible!important}
+.evidence-body .ltx_figure_panel{height:auto!important;max-height:none!important}
+.evidence-body table.ltx_tabular{min-width:max-content}
+.evidence-body figcaption{margin-top:14px!important}
+/* Optional third column: English definitions at first mention. */
+body.glossary-open .layout{max-width:2320px;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) 280px;gap:20px}
+#reader-glossary{position:sticky;top:var(--reader-header);height:calc(100vh - var(--reader-header));min-width:0;padding:0 16px 32px;background:#fbfcfe;border-left:1px solid var(--line);font:13px/1.55 system-ui}
+#reader-glossary[hidden]{display:none!important}
+.glossary-heading{position:sticky;top:0;z-index:2;background:#fbfcfe;display:flex;align-items:center;justify-content:space-between;padding:17px 0 10px;border-bottom:1px solid var(--line)}
+.glossary-heading h2{font-size:16px}.glossary-heading button{padding:0 6px;border:0;background:none;font-size:21px}
+.glossary-intro{font-size:12px;color:#758196;margin:12px 0}#glossary-search{font-size:13px;padding:8px}
+.glossary-entry{padding:13px 0;border-bottom:1px solid #e6eaf1;scroll-margin-top:65px}
+.glossary-entry h3{font-size:13px;line-height:1.4;margin:0 0 5px;font-weight:650;color:#344f75}
+.glossary-entry p{margin:0 0 6px;color:#5b687d;font-size:12px}
+.glossary-entry button{border:0;background:none;padding:0;text-align:left;color:#7c899d;font-size:11px;line-height:1.4}
+.glossary-entry.selected{background:#eaf1fc;box-shadow:0 0 0 7px #eaf1fc}.glossary-entry.in-passage h3{color:#244dac}
+article .glossary-term{cursor:help;text-decoration:underline;text-decoration-style:dotted;text-decoration-color:#9aaec9;text-underline-offset:4px}
+article .glossary-term:hover,article .glossary-term:focus-visible,article .glossary-selected{background:#e7effc;outline:1px solid #afc4e6;outline-offset:2px}
+#glossary-toggle[aria-expanded="true"]{color:#244dac;background:#e9effc;border-color:#9bb4e6}
+@media(max-width:1450px) and (min-width:1101px){body.glossary-open .layout{grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) 240px;gap:12px}body.glossary-open .layout>main{padding-left:150px}body.glossary-open main>article .paragraph-flow{grid-template-columns:110px minmax(0,1fr);gap:18px;margin-left:-128px}}
+@media(max-width:1100px){body.glossary-open .layout{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}#reader-glossary{position:fixed;right:0;width:min(340px,90vw);z-index:9;box-shadow:-8px 0 30px #24304422}}
+@media(max-width:720px){body.glossary-open .layout{display:block}}
+body.code-open .layout{max-width:2400px;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) 360px;gap:20px}
+#reader-code{position:sticky;top:74px;align-self:start;max-height:calc(100vh - 90px);overflow:auto;padding:16px;border-left:1px solid var(--line,#ddd);font:12px/1.55 system-ui;background:var(--paper,#fff)}
+#reader-code[hidden]{display:none}#reader-code h3{font-size:15px}#reader-code h4{margin-bottom:6px}#reader-code label{display:block;margin-top:15px}#reader-code select{width:100%;padding:7px}#reader-code pre{white-space:pre;overflow:auto;background:#f2f3f5;border-radius:5px;padding:10px;font:11px/1.65 ui-monospace,monospace}#reader-code details{border-top:1px solid #ddd;padding:9px 0}#reader-code summary{cursor:pointer;overflow-wrap:anywhere}#reader-code a{overflow-wrap:anywhere}#reader-code .glossary-heading{display:flex;justify-content:space-between}#reader-code .glossary-heading h2{font-size:16px}
+@media(max-width:1100px){body.code-open .layout{grid-template-columns:minmax(0,1.3fr) minmax(0,1fr)}#reader-code{position:fixed;right:0;top:70px;bottom:0;width:min(380px,90vw);z-index:35;box-shadow:-6px 0 25px #0002}}
+#reader-code #code-search{box-sizing:border-box;width:100%;padding:8px;margin:5px 0;border:1px solid #ccd0d5;border-radius:5px;font:inherit}
+#reader-code .code-shortcuts{margin:3px 0 8px}#reader-code .code-shortcuts button{font:inherit;color:#335681;background:#eef3fa;border:1px solid #ccd9eb;border-radius:5px;padding:6px 9px;cursor:pointer}
+#reader-code .code-breadcrumb{color:#64748b;font-size:11px;margin:14px 0 4px}#reader-code .code-breadcrumb+h3{margin-top:4px}#reader-code #code-search-status{font-size:11px;color:#64748b}
+/* Reported quantities use a quiet underline; personal highlight colors take precedence. */
+.reported-value{background:rgba(22,131,146,.075);text-decoration:underline;text-decoration-color:rgba(22,131,146,.48);text-decoration-thickness:1px;text-underline-offset:3px;border-radius:2px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+mark .reported-value,.removed .reported-value{background:transparent;text-decoration:inherit}
+#reader-glossary .glossary-toolbar{position:sticky;top:0;z-index:3;background:#fbfcfe;padding-bottom:12px;border-bottom:1px solid var(--line)}
+#reader-glossary .glossary-toolbar .glossary-heading{position:static;border-bottom:0;padding-bottom:8px}
+#reader-glossary .glossary-toolbar label{display:block;margin:0 0 5px}
+#reader-glossary .glossary-toolbar input{display:block;box-sizing:border-box;width:100%;margin:0}
+#reader-code .code-shortcuts{display:flex;flex-wrap:wrap;gap:5px}
+#toc a{border-left:3px solid transparent;padding-left:8px;border-radius:0 5px 5px 0;transition:background .15s,color .15s}
+#toc a.contents-current{color:#244dac;background:#e8effd;border-left-color:#315acb;font-weight:700}
+#toc a.contents-parent{color:#315acb;font-weight:600}
+#versions-dialog{width:min(540px,94vw);max-height:90vh;overflow:auto;padding:22px;border:1px solid #cbd6e3;border-radius:12px;color:#243044;background:#fbfcfe;font:14px/1.5 system-ui}#versions-dialog::backdrop{background:#10203988}.versions-heading{display:flex;align-items:center;justify-content:space-between;gap:15px}.versions-heading h2{font-size:20px;margin:0}.versions-heading button{font-size:22px;background:none;border:0}.versions-check{display:flex;align-items:center;gap:8px;font-size:12px}.versions-check input{width:auto}.versions-help{font-size:12px;color:#67768c;margin-top:14px}#version-feedback{font-size:13px;color:#315acb}#versions-dialog hr{border:0;border-top:1px solid #dce2eb;margin:18px 0}#versions-current{font-size:12px;color:#61748a}
+
+/* Responsive evidence and an accessible large view for dense diagrams/tables. */
+.evidence-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}.evidence-heading h3{margin:0}.expand-visual{font-size:12px;padding:5px 10px;flex-shrink:0}.expandable-image{cursor:zoom-in}
+.evidence-body figure.ltx_figure{float:none;position:static;max-width:100%;height:auto}.evidence-body figure img{display:block;max-width:100%;height:auto;object-fit:contain}
+#visual-viewer{width:min(1200px,94vw);max-width:94vw;max-height:92vh;padding:0;border:1px solid #c9d4e4;border-radius:12px;color:#243044;background:#f7f9fc;box-shadow:0 18px 80px #15273f44;overflow:auto}
+#visual-viewer::backdrop{background:#13213799}.visual-viewer-heading{position:sticky;top:0;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 20px;background:#fff;border-bottom:1px solid #dce3ee}.visual-viewer-heading h2{font:600 18px/1.4 system-ui;margin:0}.visual-viewer-heading button{white-space:nowrap}
+.visual-viewer-content{padding:18px}.visual-viewer-content .evidence-body{margin:0}.visual-viewer-content figure>img{width:auto;max-width:100%;max-height:65vh;margin:0 auto}.visual-viewer-content figure figcaption{font-size:15px}.visual-viewer-content table.ltx_tabular .ltx_td{font-size:16px}
+@media(max-width:600px){.visual-viewer-content{padding:8px}.visual-viewer-heading{padding:10px 12px}}
+
+.evidence-filters{display:flex;gap:6px;margin:14px 0 10px;flex-wrap:wrap}.evidence-filters button{font-size:12px;padding:6px 10px}.evidence-filters button[aria-pressed="true"]{background:#e8efff;border-color:#9cb2ec;color:#2145af}.evidence-filters+select{margin-top:0}
+
+.glossary-illustration{margin:14px 0}.glossary-illustration img{display:block;width:100%;height:auto}.glossary-illustration figcaption{font:11px/1.5 system-ui;color:#63745c;margin-top:8px}
